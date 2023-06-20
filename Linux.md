@@ -6,3 +6,4 @@
 ## Bash 
 
 + https://www.redhat.com/sysadmin/arguments-options-bash-scripts
++ https://github.com/yagnasivasai/RHCSA-RHCE-Red-Hat-Linux-Certification-Study-Guide-Exams-EX200-EX300-1st-3rd-6th-7th-Edition-

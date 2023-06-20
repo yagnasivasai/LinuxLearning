@@ -1,0 +1,40 @@
+Will not ask for password if we give Keypair
+scp -i ./Ansible.pem ubuntu@34.230.58.112:/home/ansadmin/plays/ssh.yaml .
+
+
+Will ask for password if we didn't give key pair
+PS C:\Users\asus\Downloads> scp -i softwarerepo.yml ubuntu@34.230.58.112:/home/ansadmin/plays/* .
+Warning: Identity file softwarerepo.yml not accessible: No such file or directory.
+Welcome to serverubuntu@34.230.58.112's password:
+ansible.cfg                                                                           100%   20KB  39.8KB/s   00:00
+hosts                                                                                 100%   36     0.1KB/s   00:00
+motd.yml                                                                              100%  286     0.9KB/s   00:00
+regular_tasks.yml                                                                     100%  339     1.1KB/s   00:00
+scp: /home/ansadmin/plays/roles: not a regular file
+scp: /home/ansadmin/plays/secret.yaml: Permission denied
+softwarerepo.yml                                                                      100%  519     1.7KB/s   00:00
+taskscheduler.yml                                                                     100%  300     1.4KB/s   00:00
+testfile                                                                              100%    7     0.0KB/s   00:00
+userlist.yaml
+
+
+Admin@LAPTOP-2J429PGD MINGW64 ~/Downloads
+$ scp -i ./mvp.pem ec2-user@107.22.164.170:/home/ec2-user/* .
+scp: /home/ec2-user/*: No such file or directory
+
+Admin@LAPTOP-2J429PGD MINGW64 ~/Downloads
+$ scp -i ./mvp.pem ec2-user@107.22.164.170:/home/ec2-user/
+usage: scp [-346ABCOpqRrsTv] [-c cipher] [-D sftp_server_path] [-F ssh_config]
+           [-i identity_file] [-J destination] [-l limit]
+           [-o ssh_option] [-P port] [-S program] source ... target
+
+Admin@LAPTOP-2J429PGD MINGW64 ~/Downloads
+$ scp -i ./mvp.pem .\mvp.pem ec2-user@107.22.164.170:/home/ec2-user/
+.mvp.pem: No such file or directory
+
+Admin@LAPTOP-2J429PGD MINGW64 ~/Downloads
+$ scp -i ./mvp.pem ./mvp.pem ec2-user@107.22.164.170:/home/ec2-user/
+mvp.pem                                                                               100% 1674     0.9KB/s   00:01
+
+Admin@LAPTOP-2J429PGD MINGW64 ~/Downloads
+$
